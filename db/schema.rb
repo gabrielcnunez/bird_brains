@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_15_013952) do
+ActiveRecord::Schema.define(version: 2022_10_15_191549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2022_10_15_013952) do
     t.boolean "raptor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "hotspot_id"
+    t.index ["hotspot_id"], name: "index_birds_on_hotspot_id"
   end
 
   create_table "hotspots", force: :cascade do |t|
@@ -33,4 +35,5 @@ ActiveRecord::Schema.define(version: 2022_10_15_013952) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "birds", "hotspots"
 end
