@@ -14,16 +14,22 @@ RSpec.describe 'the birds index page' do
 
   it 'displays the birds page' do
     visit "/birds"
-    
+
     expect(page).to have_content(@bird_1.name)
     expect(page).to have_content(@bird_2.name)
   end
 
   it 'displays the birds attributes' do
     visit "/birds"
-    
-    expect(page).to have_content(@bird_1.behavior, @bird_1.quantity, @bird_1.raptor, @bird_1.hotspot_id)
-    expect(page).to have_content(@bird_2.behavior, @bird_2.quantity, @bird_2.raptor, @bird_2.hotspot_id)
+
+    expect(page).to have_content(@bird_1.behavior)
+    expect(page).to have_content(@bird_2.behavior)
+    expect(page).to have_content(@bird_1.quantity)
+    expect(page).to have_content(@bird_2.quantity)
+    expect(page).to have_content(@bird_1.raptor)
+    expect(page).to have_content(@bird_2.raptor)
+    expect(page).to have_content(@bird_1.hotspot_id)
+    expect(page).to have_content(@bird_2.hotspot_id)
   end
   
 end
