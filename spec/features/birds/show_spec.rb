@@ -19,14 +19,13 @@ RSpec.describe 'the birds show page' do
 
   it 'displays the bird name' do
     visit "/birds/#{@bird_1.id}"
-    # save_and_open_page
 
     expect(page).to have_content(@bird_1.name)
   end
 
   it 'displays the bird attributes' do
     visit "/birds/#{@bird_1.id}"
-    
+
     expect(page).to have_content(@bird_1.behavior)
     expect(page).to have_content(@bird_1.quantity)
     expect(page).to have_content(@bird_1.raptor)

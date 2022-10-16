@@ -16,7 +16,6 @@ RSpec.describe 'the hotspots show page' do
 
   it 'displays the hotspot attributes' do
     visit "/hotspots/#{@hotspot_1.id}"
-    save_and_open_page
     
     expect(page).to have_content(@hotspot_1.county)
     expect(page).to have_content(@hotspot_1.rank)
