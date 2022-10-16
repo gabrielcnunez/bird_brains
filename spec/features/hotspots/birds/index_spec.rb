@@ -17,7 +17,6 @@ RSpec.describe 'the hotspots birds index page' do
 
   it 'displays all of the birds for the hotspot' do
     visit "/hotspots/#{@madera.id}/birds"
-    # save_and_open_page
 
     expect(page).to have_content(@dove.name)
     expect(page).to have_content(@trogon.name)
@@ -25,14 +24,13 @@ RSpec.describe 'the hotspots birds index page' do
 
   it 'displays attributes for each bird' do
     visit "/hotspots/#{@madera.id}/birds"
+    save_and_open_page
 
     expect(page).to have_content(@dove.behavior)
     expect(page).to have_content(@dove.quantity)
     expect(page).to have_content(@dove.raptor)
-    expect(page).to have_content(@dove.hotspot_id)
     expect(page).to have_content(@trogon.behavior)
     expect(page).to have_content(@trogon.quantity)
     expect(page).to have_content(@trogon.raptor)
-    expect(page).to have_content(@trogon.hotspot_id)
   end
 end

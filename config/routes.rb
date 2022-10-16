@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/hotspots/:id', to: 'hotspots#show'
   get '/birds', to: 'birds#index'
   get '/birds/:id', to: 'birds#show'
+  get '/hotspots/:hotspot_id/birds', to: 'hotspot_birds#index'
 end
