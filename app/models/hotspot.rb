@@ -1,3 +1,3 @@
 class Hotspot < ApplicationRecord
-  has_many :songs
+  has_many :birds
 end

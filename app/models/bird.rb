@@ -1,3 +1,3 @@
 class Bird < ApplicationRecord
-  belongs_to :artist
+  belongs_to :hotspot
 end
