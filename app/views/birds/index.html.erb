@@ -2,8 +2,8 @@
 
 <% @birds.each do |bird| %>
   <h3><%= bird.name %></h3>
-  <p>What was it doing?: <%= bird.behavior %></p>
-  <p>How many?: <%= bird.quantity %></p>
+  <p>Behavior: <%= bird.behavior %></p>
+  <p>Quantity: <%= bird.quantity %></p>
   <p>Was it a raptor?: <%= bird.raptor %></p>
-  <p>Where was it seen?: Hotspot No. <%= bird.hotspot_id %></p>
+  <p>Which hotspot?: Hotspot No. <%= bird.hotspot_id %></p>
 <% end %>
