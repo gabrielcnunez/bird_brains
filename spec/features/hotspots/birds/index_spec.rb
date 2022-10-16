@@ -24,7 +24,6 @@ RSpec.describe 'the hotspots birds index page' do
 
   it 'displays attributes for each bird' do
     visit "/hotspots/#{@madera.id}/birds"
-    save_and_open_page
 
     expect(page).to have_content(@dove.behavior)
     expect(page).to have_content(@dove.quantity)
