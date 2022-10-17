@@ -1,6 +1,7 @@
 class HotspotsController < ApplicationController
   def index
-    @hotspots = Hotspot.all
+    @hotspots = Hotspot.all.order(created_at: :desc)
+    # require 'pry'; binding.pry
   end
 
   def show
