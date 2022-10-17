@@ -44,4 +44,11 @@ RSpec.describe 'the hotspots show page' do
     expect(current_path).to eq("/hotspots")
   end
 
+  it 'has a link to birds page associated with hotspot' do
+    visit "/hotspots/#{@madera.id}"
+    click_on "View Bird Species"
+    
+    expect(current_path).to eq ("/hotspots/#{@madera.id}/birds")
+  end
+
 end
