@@ -1,6 +1,7 @@
 class HotspotsController < ApplicationController
   def index
-    @hotspots = Hotspot.all.order(created_at: :desc)
+    hotspots = Hotspot.all
+    @hotspots = hotspots.newest_first
   end
 
   def show
