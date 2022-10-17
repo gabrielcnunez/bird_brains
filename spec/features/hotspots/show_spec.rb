@@ -24,9 +24,6 @@ RSpec.describe 'the hotspots show page' do
     expect(page).to have_content(@madera.accessible)
   end
 
-  # As a visitor
-  # When I visit a parent's show page
-  # I see a count of the number of children associated with this parent
   it 'displays count of birds associated with hotspot' do
     visit "/hotspots/#{@madera.id}"
 
