@@ -1,0 +1,8 @@
+<h1><%= @hotspot.name %> birds</h1>
+
+<% @birds.each do |bird| %>
+  <h3><%= bird.name %></h3>
+  <p>Behavior: <%= bird.behavior %></p>
+  <p>Quantity: <%= bird.quantity %></p>
+  <p>Was it a raptor?: <%= bird.raptor %></p>
+<% end %>
