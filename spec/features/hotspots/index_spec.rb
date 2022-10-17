@@ -27,5 +27,19 @@ RSpec.describe 'the hotspots index page' do
     expect(page).to have_content(@hotspot_1.created_at)
     expect(page).to have_content(@hotspot_2.created_at)
   end
+
+  it 'has a link to the birds index' do
+    visit "/hotspots"
+    click_on "Birds"
+
+    expect(current_path).to eq("/birds")
+  end
+
+  it 'has a link to the hotspots index' do
+    visit "/hotspots"
+    click_on "Hotspots"
+
+    expect(current_path).to eq("/hotspots")
+  end
   
 end

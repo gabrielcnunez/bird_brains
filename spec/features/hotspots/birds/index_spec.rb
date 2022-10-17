@@ -32,4 +32,18 @@ RSpec.describe 'the hotspots birds index page' do
     expect(page).to have_content(@trogon.quantity)
     expect(page).to have_content(@trogon.raptor)
   end
+
+  it 'has a link to the birds index' do
+    visit "/hotspots/#{@madera.id}/birds"
+    click_on "Birds"
+
+    expect(current_path).to eq("/birds")
+  end
+
+  it 'has a link to the hotspots index' do
+    visit "/hotspots/#{@madera.id}/birds"
+    click_on "Hotspots"
+
+    expect(current_path).to eq("/hotspots")
+  end
 end

@@ -30,4 +30,18 @@ RSpec.describe 'the hotspots show page' do
     expect(page).to have_content("Total Number of Bird Species Seen: 2")
   end
 
+  it 'has a link to the birds index' do
+    visit "/hotspots/#{@madera.id}"
+    click_on "Birds"
+
+    expect(current_path).to eq("/birds")
+  end
+
+  it 'has a link to the hotspots index' do
+    visit "/hotspots/#{@madera.id}"
+    click_on "Hotspots"
+
+    expect(current_path).to eq("/hotspots")
+  end
+
 end

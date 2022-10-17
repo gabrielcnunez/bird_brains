@@ -32,4 +32,17 @@ RSpec.describe 'the birds index page' do
     expect(page).to have_content(@bird_2.hotspot_id)
   end
   
+  it 'has a link to the birds index' do
+    visit "/birds"
+    click_on "Birds"
+
+    expect(current_path).to eq("/birds")
+  end
+
+  it 'has a link to the hotspots index' do
+    visit "/birds"
+    click_on "Hotspots"
+
+    expect(current_path).to eq("/hotspots")
+  end
 end
