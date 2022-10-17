@@ -14,5 +14,22 @@ RSpec.describe 'the hotspots index page' do
     expect(page).to have_content(@hotspot_1.name)
     expect(page).to have_content(@hotspot_2.name)
   end
+
+  # As a visitor
+  # When I visit the parent index,
+  # I see that records are ordered by most recently created first
+  # And next to each of the records I see when it was created
+  it 'displays hotspots in order created' do
+    visit "/hotspots"
+
+    expect("Sweetwater Wetlands").to appear_before("Madera Canyon", only_text: true)
+  end
+
+  it 'displays creation timestamp next to hotspot' do
+    visit "/hotspots"
+
+    expect(page).to have_content(@hotspot_1.created_at)
+    expect(page).to have_content(@hotspot_2.created_at)
+  end
   
 end
