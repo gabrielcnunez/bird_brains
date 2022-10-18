@@ -12,6 +12,7 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+![Screen Shot 2022-10-18 at 4 08 41 PM](https://user-images.githubusercontent.com/108249540/196561876-6e0e77e6-4ae5-445d-b189-80ab45a994ab.png)
 
 * Database initialization
 
