@@ -10,11 +10,6 @@ RSpec.describe 'the hotspots birds index page' do
                                     quantity: 1, raptor: false)                                                   
   end
 
-  # As a visitor
-  # When I visit '/parents/:parent_id/child_table_name'
-  # Then I see each Child that is associated with that Parent with each Child's attributes
-  # (data from each column that is on the child table)
-
   it 'displays all of the birds for the hotspot' do
     visit "/hotspots/#{@madera.id}/birds"
 
@@ -46,4 +41,19 @@ RSpec.describe 'the hotspots birds index page' do
 
     expect(current_path).to eq("/hotspots")
   end
+
+  it 'has a link to sort birds alphabetically' do
+    visit "/hotspots/#{@madera.id}/birds"
+    click_on "Sort Birds by Name"
+
+    expect(current_path).to eq("/hotspots/#{@madera.id}/birds")
+  end
+
+  it 'can sort birds alphabetically by name' do
+    visit "/hotspots/#{@madera.id}/birds"
+    click_on "Sort Birds by Name"
+
+    expect(@trogon).to appear_before(@dove)
+  end
+
 end
