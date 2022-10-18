@@ -1,0 +1,11 @@
+<%= form_with url: "/hotspots/#{@hotspot.id}", method: :patch, local: true do |form| %>
+<%= form.label :name %>
+<%= form.text_field :name %><br>
+<%= form.label :county %>
+<%= form.text_field :county %><br>
+<%= form.label :rank %>
+<%= form.text_field :rank %><br>
+<%= form.label :accessible %>
+<%= form.text_field :accessible %><br>
+<%= form.submit 'Update Hotspot' %>
+<% end %>

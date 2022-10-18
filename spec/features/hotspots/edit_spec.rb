@@ -20,7 +20,7 @@ RSpec.describe 'edit a Hotspot' do
     visit "/hotspots/#{hotspot.id}"
     click_button "Edit #{hotspot.name}"
 
-    expect(current_path).to eq("/artists/#{artist.id}/edit")
+    expect(current_path).to eq("/hotspots/#{hotspot.id}/edit")
   end
 
   it 'can edit the Hotspot' do
@@ -33,9 +33,9 @@ RSpec.describe 'edit a Hotspot' do
     click_button "Edit #{hotspot.name}"
 
     fill_in 'Name', with: 'Turkey Creek Canyon'
-    click_button 'Update Artist'
+    click_button 'Update Hotspot'
     
-    expect(current_path).to eq("/artists/#{artist.id}")
+    expect(current_path).to eq("/hotspots/#{hotspot.id}")
     expect(page).to have_content('Turkey Creek Canyon')
   end
 end
