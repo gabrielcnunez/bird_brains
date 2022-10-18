@@ -5,3 +5,9 @@
 <p>Location: <%= @hotspot.county %> County</p>
 <p>Hotspot Rank: <%= @hotspot.rank %></p>
 <p>Accessible?: <%= @hotspot.accessible %></p>
+
+<h6>
+  <%= button_to "Edit #{@hotspot.name}",
+  "/hotspots/#{@hotspot.id}/edit",
+  method: :get %>
+</h6> 

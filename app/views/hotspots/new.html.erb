@@ -1,0 +1,13 @@
+<h1>New Birding Hotspot</h1>
+
+<%= form_with url: '/hotspots', method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+  <%= form.label :county %>
+  <%= form.text_field :county %><br>
+  <%= form.label :rank %>
+  <%= form.text_field :rank %><br>
+  <%= form.label :accessible %>
+  <%= form.text_field :accessible %><br>
+  <%= form.submit 'Create Hotspot' %>
+<% end %>

@@ -1,0 +1,13 @@
+<h1>Add New Bird to Hotspot</h1>
+
+<%= form_with url: "/hotspots/#{@hotspot.id}/birds", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+  <%= form.label :behavior %>
+  <%= form.text_field :behavior %><br>
+  <%= form.label :quantity %>
+  <%= form.text_field :quantity %><br>
+  <%= form.label :raptor %>
+  <%= form.text_field :raptor %><br>
+  <%= form.submit 'Add Bird to Hotspot' %>
+<% end %>

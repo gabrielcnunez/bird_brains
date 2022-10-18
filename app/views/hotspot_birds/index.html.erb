@@ -6,3 +6,5 @@
   <p>Quantity: <%= bird.quantity %></p>
   <p>Was it a raptor?: <%= bird.raptor %></p>
 <% end %>
+
+<%= link_to 'Add New Bird to Hotspot', "/hotspots/#{@hotspot.id}/birds/new" %>
