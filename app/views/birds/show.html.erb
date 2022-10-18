@@ -4,3 +4,5 @@
 <p>Quantity: <%= @bird.quantity %></p>
 <p>Was it a raptor?: <%= @bird.raptor %></p>
 <p>Which hotspot?: Hotspot No. <%= @bird.hotspot_id %></p>
+
+<h4><%= link_to "Edit #{@bird.name}", "/birds/#{@bird.id}/edit" %></h4> 

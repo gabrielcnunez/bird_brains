@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   patch '/hotspots/:id', to: 'hotspots#update'
   get '/hotspots/:hotspot_id/birds/new', to: 'hotspot_birds#new'
   post '/hotspots/:hotspot_id/birds', to: 'hotspot_birds#create'
+  get '/birds/:id/edit', to: 'birds#edit'
+  patch '/birds/:id', to: 'birds#update'
 end

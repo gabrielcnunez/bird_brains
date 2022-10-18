@@ -1,3 +1,5 @@
+<h1>Edit <%= @hotspot.name %></h1>
+
 <%= form_with url: "/hotspots/#{@hotspot.id}", method: :patch, local: true do |form| %>
 <%= form.label :name %>
 <%= form.text_field :name %><br>
