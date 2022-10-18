@@ -37,7 +37,7 @@ RSpec.describe 'creating a new Hotspot Bird' do
     fill_in('Name', with: 'Turkey Vulture')
     fill_in('Behavior', with: 'soaring')
     fill_in('Quantity', with: '7')
-    fill_in('Raptor?', with: 'true')
+    fill_in('Raptor', with: 'true')
     click_button('Add Bird to Hotspot')
 
     expect(current_path).to eq("/hotspots/#{@madera.id}/birds")
