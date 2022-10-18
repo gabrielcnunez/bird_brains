@@ -12,10 +12,12 @@ class HotspotsController < ApplicationController
   end
 
   def create
-    hotspot = Hotspot.create(name: params[:name],
-                             county: params[:county],
-                             rank: params[:rank],
-                             accessible: params[:accessible])
+    hotspot = Hotspot.create(hotspot_params)
     redirect_to "/hotspots"
   end
+
+  private
+  def hotspot_params
+    params.permit(:name, :county, :rank, :accessible)
+  end 
 end
