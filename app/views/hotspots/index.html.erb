@@ -1,6 +1,7 @@
 <h1>Hotspots</h1>
 <% @hotspots.each do |hotspot| %>
-  <p><%= hotspot.name %> - Created on <%= hotspot.created_at %></p>
+  <p><%= hotspot.name %> - Created on <%= hotspot.created_at %> - 
+  <%= link_to "Edit #{hotspot.name} Hotspot", "/hotspots/#{hotspot.id}/edit" %></p>
 <% end %>
 
 <%= link_to "New Hotspot", "/hotspots/new" %>

@@ -53,4 +53,18 @@ RSpec.describe 'the birds index page' do
     expect(page).to_not have_content(@bird_1.name)
   end
 
+  it 'has a link to edit each bird' do
+    visit "/birds"
+    
+    expect(page).to have_content("Edit #{@bird_2.name}")
+  end
+
+  it 'has a link that redirects to each birds edit page' do
+    visit "/birds"
+
+    click_on "Edit #{@bird_2.name}"
+
+    expect(current_path).to eq("/birds/#{@bird_2.id}/edit")
+  end
+
 end
