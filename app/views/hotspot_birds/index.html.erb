@@ -1,5 +1,5 @@
 <h1><%= @hotspot.name %> birds</h1>
-
+<h4><%= link_to "Sort Birds by Name", :sort => "name"%></h4>
 <% @birds.each do |bird| %>
   <h3><%= bird.name %></h3>
   <p>Behavior: <%= bird.behavior %></p>

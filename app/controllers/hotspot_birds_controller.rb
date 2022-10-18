@@ -1,7 +1,7 @@
 class HotspotBirdsController < ApplicationController
   def index
     @hotspot = Hotspot.find(params[:hotspot_id])
-    @birds = @hotspot.birds
+    @birds = @hotspot.birds.order(params[:sort])
   end
 
   def new

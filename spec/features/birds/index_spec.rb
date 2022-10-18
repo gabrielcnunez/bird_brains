@@ -45,4 +45,12 @@ RSpec.describe 'the birds index page' do
 
     expect(current_path).to eq("/hotspots")
   end
+
+  it 'displays birds that are raptors' do
+    visit "/birds"
+
+    expect(page).to have_content(@bird_2.name)
+    expect(page).to_not have_content(@bird_1.name)
+  end
+
 end
