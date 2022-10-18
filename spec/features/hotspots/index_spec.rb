@@ -41,5 +41,26 @@ RSpec.describe 'the hotspots index page' do
 
     expect(current_path).to eq("/hotspots")
   end
+
+  it 'has a link to edit each hotspot' do
+    visit "/hotspots"
+    
+    expect(page).to have_content("Edit #{@hotspot_1.name}")
+    expect(page).to have_content("Edit #{@hotspot_2.name}")
+  end
+
+  it 'has a link that redirects to each hotspots edit page' do
+    visit "/hotspots"
+
+    click_on "Edit #{@hotspot_1.name}"
+
+    expect(current_path).to eq("/hotspots/#{@hotspot_1.id}/edit")
+
+    visit "/hotspots"
+
+    click_on "Edit #{@hotspot_2.name}"
+
+    expect(current_path).to eq("/hotspots/#{@hotspot_2.id}/edit")
+  end
   
 end
