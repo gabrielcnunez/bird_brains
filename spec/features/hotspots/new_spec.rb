@@ -20,7 +20,7 @@ RSpec.describe 'creating a new Hotspot' do
     expect(current_path).to eq('/hotspots/new')
   end
 
-  it 'can create a new Hotpost' do
+  it 'can create a new Hotspot' do
     visit '/hotspots/new'
 
     fill_in('Name', with: 'Turkey Creek Trail')
