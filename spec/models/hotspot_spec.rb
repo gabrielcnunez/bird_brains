@@ -13,7 +13,7 @@ RSpec.describe Hotspot do
     @trogon = @madera.birds.create!(name: "Elegant Trogon", behavior: "calling",
                                     quantity: 1, raptor: false)
     @cooper = @sweet.birds.create!(name: "Cooper's Hawk", behavior: "soaring",
-                                        quantity: 1, raptor: false)                         
+                                        quantity: 1, raptor: true)                         
   end
 
   describe 'class methods' do
