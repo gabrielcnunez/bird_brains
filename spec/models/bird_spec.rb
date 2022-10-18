@@ -17,7 +17,7 @@ RSpec.describe Bird do
   end
 
   describe 'class methods' do
-    describe '#show_raptor_is_true' do
+    describe '#show_raptor' do
       it 'returns birds where raptor? boolean is true' do
         expect(Bird.show_raptor_is_true).to eq([@cooper])
       end
