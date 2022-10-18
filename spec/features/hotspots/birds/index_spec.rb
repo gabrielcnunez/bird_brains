@@ -51,9 +51,12 @@ RSpec.describe 'the hotspots birds index page' do
 
   it 'can sort birds alphabetically by name' do
     visit "/hotspots/#{@madera.id}/birds"
+
+    expect("Mourning Dove").to appear_before("Elegant Trogon", only_text: true)
+    
     click_on "Sort Birds by Name"
 
-    expect(@trogon).to appear_before(@dove)
+    expect("Elegant Trogon").to appear_before("Mourning Dove", only_text: true)
   end
 
 end
